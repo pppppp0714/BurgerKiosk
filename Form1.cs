@@ -50,6 +50,14 @@ namespace BurgerKiosk
             groupsList.Add(grpOption);
             groupsList.Add(grpOrder);
             currentChildIndices = new int[groupItems.Count];
+            // 선택 변경 시 실시간으로 주문 내역 갱신
+            rdoBurger.CheckedChanged += SelectionChanged;
+            rdoBulgogiBurger.CheckedChanged += SelectionChanged;
+            rdoChickenBurger.CheckedChanged += SelectionChanged;
+            chkPotato.CheckedChanged += SelectionChanged;
+            chkCola.CheckedChanged += SelectionChanged;
+            chkCheese.CheckedChanged += SelectionChanged;
+            chkSauce.CheckedChanged += SelectionChanged;
             // GotFocus를 연결하여 포커스 변경(마우스, 런타임 등) 시 상태 동기화
             for (int gi = 0; gi < groupItems.Count; gi++)
             {
@@ -86,6 +94,9 @@ namespace BurgerKiosk
             totalCost = 0;
             lblTotalCost.Text = $"총 금액 : {totalCost:N0}원";
             lblTotalCost.ForeColor = Color.Blue;
+
+            // 실시간 갱신 위해 상태 초기화 호출
+            UpdateOrderDisplay();
 
         }
 
@@ -278,14 +289,18 @@ namespace BurgerKiosk
             return groupItems[currentGroupIndex][currentChildIndices[currentGroupIndex]];
         }
 
-        private void btnOrder_Click(object sender, EventArgs e)
+        private void SelectionChanged(object? sender, EventArgs e)
         {
-            if (!rdoBurger.Checked && !rdoBulgogiBurger.Checked && !rdoChickenBurger.Checked)
-            {
-                lblTotalCost.ForeColor = Color.Red;
-                lblTotalCost.Text = "햄버거를 선택해주세요.";
-                return;
-            }
+            UpdateOrderDisplay();
+        }
+
+        private void UpdateOrderDisplay()
+        {
+            // 메뉴는 단일 선택: 기존 메뉴 항목을 제거하고 현재 메뉴만 표시
+            // 옵션은 다중 선택: 체크된 옵션만 표시
+            lstOrder.Items.Clear();
+            totalCost = 0;
+
             if (rdoBurger.Checked)
             {
                 lstOrder.Items.Add("햄버거 5,000원");
@@ -322,8 +337,25 @@ namespace BurgerKiosk
                 lstOrder.Items.Add("소스 500원");
                 totalCost += 500;
             }
+
             lblTotalCost.ForeColor = Color.Blue;
             lblTotalCost.Text = ($"총 금액 : {totalCost:N0}원");
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            // 주문하기는 실시간으로 반영된 화면 상태를 변경하지 않음
+            // 선택된 메뉴가 없으면 에러 표시
+            if (!rdoBurger.Checked && !rdoBulgogiBurger.Checked && !rdoChickenBurger.Checked)
+            {
+                lblTotalCost.ForeColor = Color.Red;
+                lblTotalCost.Text = "햄버거를 선택해주세요.";
+                return;
+            }
+
+            // 주문 접수 확인(주문내역 및 총액은 실시간 뷰에서 관리되므로 여기서는 변경하지 않음)
+            lblTotalCost.ForeColor = Color.Green;
+            lblTotalCost.Text = "주문이 접수되었습니다.";
         }
     }
 }
