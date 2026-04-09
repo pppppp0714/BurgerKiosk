@@ -121,7 +121,7 @@
   <data name="picChickenBurger.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAASwAAADTCAIAAAC0rLlaAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAP
-        XwAAD18B14rayQAAACR0RVh0U29mdHdhcmUAQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dz2FQkFgAA
+        XgAAD14BBc04LQAAACR0RVh0U29mdHdhcmUAQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dz2FQkFgAA
         AAd0SU1FB9wHGxIoCNA0K/wAAP9vSURBVHhe7L1leBt39jbsttstpknTJA0ndgzSsGQ7zMzkOGa2ZZCZ
         mcPMzMzgOHFiRjEzmZmZLb3X2E63+3+fjwvd3Z7LMBrJsmbmd8+h+5yj19zc3PL38v/f86f8B0lra2tL
         S1NbS/voxv9bWv+8wn8k0WtpadGNilarHdv4U/4jRTv69TcZ+dszf17ZP7D8HQjH5M8L9h8qw/i1G90a
@@ -2394,7 +2394,7 @@
   <data name="picBulgogiBurger.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAagAAAEyCAIAAAAgLdOyAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAA/7JJREFUeF7s/QV4G2maLgwrDvXM7NDuwM7uzPT0dKc7zOCYKWY7thMnjh1DjDEz
+        vAAADrwBlbxySQAA/7JJREFUeF7s/QV4G2maLgwrDvXM7NDuwM7uzPT0dKc7zOCYKWY7thMnjh1DjDEz
         MzMzMzMzM8uWLbAki8liyWwn9V0lJ+l0z+yB/z/ft7tzfF/PJculIpXeuut5H4RISEqfyn8jkfzfFAlJ
         2f9A5P6uSEnISklISkrdl5S+KyH1WEJSWlxSQVxSTlxKWlxKUlxKVlxSQUJCCVxZ6vEjmUf3ZeTuyyo+
         kFJ4LC0nJS0PHlFCSlJKRlxK9oG07ANpufsyco+kZMWlZCUkpaUkJGUkHslIPpSSfCQh9UhcSvKRtKRo

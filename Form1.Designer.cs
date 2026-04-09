@@ -37,6 +37,7 @@
             rdoChickenBurger = new RadioButton();
             rdoBulgogiBurger = new RadioButton();
             rdoBurger = new RadioButton();
+            rdoNone = new RadioButton();
             grpOption = new GroupBox();
             chkSauce = new CheckBox();
             chkCheese = new CheckBox();
@@ -155,6 +156,16 @@
             rdoBurger.Text = "햄버거";
             rdoBurger.UseVisualStyleBackColor = true;
             // 
+            // rdoNone
+            // 
+            rdoNone.AutoSize = true;
+            rdoNone.Checked = true;
+            rdoNone.Location = new Point(-19, -18);
+            rdoNone.Name = "rdoNone";
+            rdoNone.Size = new Size(17, 16);
+            rdoNone.TabIndex = 99;
+            rdoNone.TabStop = true;
+            // 
             // grpOption
             // 
             grpOption.Controls.Add(chkSauce);
@@ -205,7 +216,6 @@
             chkCola.TabIndex = 1;
             chkCola.Text = "콜라";
             chkCola.UseVisualStyleBackColor = true;
-            chkCola.CheckedChanged += checkBox2_CheckedChanged;
             // 
             // chkPotato
             // 
@@ -236,7 +246,7 @@
             // 
             lblTotalCost.AutoSize = true;
             lblTotalCost.Font = new Font("맑은 고딕", 12F);
-            lblTotalCost.ForeColor = SystemColors.MenuHighlight;
+            lblTotalCost.ForeColor = Color.Blue;
             lblTotalCost.Location = new Point(11, 225);
             lblTotalCost.Name = "lblTotalCost";
             lblTotalCost.Size = new Size(128, 28);
@@ -246,7 +256,7 @@
             // lstOrder
             // 
             lstOrder.Font = new Font("맑은 고딕", 12F);
-            lstOrder.ForeColor = SystemColors.MenuHighlight;
+            lstOrder.ForeColor = Color.Blue;
             lstOrder.FormattingEnabled = true;
             lstOrder.Location = new Point(11, 46);
             lstOrder.Name = "lstOrder";
@@ -286,6 +296,7 @@
             Controls.Add(btnReset);
             Controls.Add(btnOrder);
             Controls.Add(grpOrder);
+            Controls.Add(rdoNone);
             Controls.Add(grpOption);
             Controls.Add(grpBurger);
             Controls.Add(lblAppName);
@@ -308,6 +319,7 @@
 
         private Label lblAppName;
         private GroupBox grpBurger;
+        private RadioButton rdoNone;
         private RadioButton rdoChickenBurger;
         private RadioButton rdoBulgogiBurger;
         private RadioButton rdoBurger;
