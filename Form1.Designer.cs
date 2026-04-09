@@ -58,6 +58,9 @@
             // 
             // lblAppName
             // 
+// 
+// lblAppName
+// 
             lblAppName.AutoSize = true;
             lblAppName.Font = new Font("맑은 고딕", 24F);
             lblAppName.ForeColor = SystemColors.HotTrack;
@@ -69,7 +72,7 @@
             // 
             // grpBurger
             // 
-            grpBurger.Controls.Add(picChickenBurger);
+            grpBurger.Controls.Add(picChickenBurger); // Updated to include chicken burger
             grpBurger.Controls.Add(picBulgogiBurger);
             grpBurger.Controls.Add(picBurger);
             grpBurger.Controls.Add(rdoChickenBurger);
@@ -81,7 +84,6 @@
             grpBurger.Name = "grpBurger";
             grpBurger.Size = new Size(286, 294);
             grpBurger.TabIndex = 1;
-            grpBurger.TabStop = false;
             grpBurger.Text = "메뉴 선택";
             // 
             // picChickenBurger
@@ -178,7 +180,6 @@
             grpOption.Name = "grpOption";
             grpOption.Size = new Size(192, 199);
             grpOption.TabIndex = 2;
-            grpOption.TabStop = false;
             grpOption.Text = "추가 옵션";
             // 
             // chkSauce
@@ -186,7 +187,7 @@
             chkSauce.AutoSize = true;
             chkSauce.Font = new Font("맑은 고딕", 12F);
             chkSauce.ForeColor = Color.DarkSlateBlue;
-            chkSauce.Location = new Point(6, 151);
+            chkSauce.Location = new Point(6, 113);
             chkSauce.Name = "chkSauce";
             chkSauce.Size = new Size(121, 32);
             chkSauce.TabIndex = 3;
@@ -198,7 +199,7 @@
             chkCheese.AutoSize = true;
             chkCheese.Font = new Font("맑은 고딕", 12F);
             chkCheese.ForeColor = Color.DarkSlateBlue;
-            chkCheese.Location = new Point(6, 113);
+            chkCheese.Location = new Point(6, 151);
             chkCheese.Name = "chkCheese";
             chkCheese.Size = new Size(121, 32);
             chkCheese.TabIndex = 3;
@@ -239,7 +240,6 @@
             grpOrder.Name = "grpOrder";
             grpOrder.Size = new Size(229, 261);
             grpOrder.TabIndex = 3;
-            grpOrder.TabStop = false;
             grpOrder.Text = "주문 내역";
             // 
             // lblTotalCost
